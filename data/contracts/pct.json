@@ -1,1 +1,36 @@
-[]
+[
+    {
+        "stock": "$TSLA",
+        "type": "\ud83d\udd34P",
+        "strike": "$300.0",
+        "exp": "02/28/25",
+        "gatherdate": "2025-02-25 14:34:57",
+        "contractsymbol": "TSLA250228P00300000",
+        "stk_price": 300.15,
+        "lastprice": 8.6,
+        "ask": 8.7,
+        "bid": 8.6,
+        "change": 7.4600005,
+        "percentchange": 654.3861,
+        "volume": 98269,
+        "openinterest": 21136,
+        "impliedvolatility": 0.6962920996093751,
+        "stk_price_chg": "-33.77",
+        "stk_price_avg_30d": 317.03499999999997,
+        "stk_price_avg_5d": 317.03499999999997,
+        "lastprice_chg": "7.84",
+        "lastprice_avg_30d": 4.68,
+        "lastprice_avg_5d": 4.68,
+        "pct_chg": "1031.57894736842",
+        "iv_chg": "0.0644524804687501",
+        "iv_avg_5d": 0.6640658593750001,
+        "iv_avg_30d": 0.6640658593750001,
+        "iv_avg_all": 0.6640658593750001,
+        "vol_chg": "59104.0",
+        "oi_chg": "3735.0",
+        "flag": 0,
+        "amnt": 0,
+        "flag_name": "pct_chg",
+        "moneyness": 1.0005
+    }
+]
