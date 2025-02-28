@@ -1,1 +1,36 @@
-[]
+[
+    {
+        "stock": "$RTX",
+        "type": "\ud83d\udfe2C",
+        "strike": "$132.0",
+        "exp": "02/28/25",
+        "gatherdate": "2025-02-27 14:02:21",
+        "contractsymbol": "RTX250228C00132000",
+        "stk_price": 130.76,
+        "lastprice": 0.24,
+        "ask": 0.29,
+        "bid": 0.22,
+        "change": 0.17999999,
+        "percentchange": 300.0,
+        "volume": 15483,
+        "openinterest": 169,
+        "impliedvolatility": 0.194343994140625,
+        "stk_price_chg": "3.41",
+        "stk_price_avg_30d": 129.055,
+        "stk_price_avg_5d": 129.055,
+        "lastprice_chg": "0.22",
+        "lastprice_avg_30d": 0.13,
+        "lastprice_avg_5d": 0.13,
+        "pct_chg": "1100.0",
+        "iv_chg": "-0.04687453125",
+        "iv_avg_5d": 0.217781259765625,
+        "iv_avg_30d": 0.217781259765625,
+        "iv_avg_all": 0.217781259765625,
+        "vol_chg": "15468.0",
+        "oi_chg": "15.0",
+        "flag": 0,
+        "amnt": 0,
+        "flag_name": "pct_chg",
+        "moneyness": 0.9906060606060605
+    }
+]
