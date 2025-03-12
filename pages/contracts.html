@@ -26,7 +26,8 @@
         <script type="module" src="../lib/d3.js"></script>
         <script type="module" src="../lib/plot.js"></script>
         <script type="module" src="../lib/plotly.js"></script>
-        <body>
+    </head>
+    <body>
             <!-- NAVIGATION BAR -->
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
                 <div class="container-fluid">
@@ -73,7 +74,32 @@
                 </div>
             </div>
 
+            <!-- FOOTER -->
+            <div class="mt-5 p-4 bg-dark text-white text-center">
+                <p>Last Updated: <span id="lastUpdated"></span></p>
+            </div>
+            
+            <script>
+                function updateTimestamp() {
+                    const now = new Date();
+                    const options = {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit',
+                        timeZoneName: 'short'
+                    };
+                    document.getElementById('lastUpdated').textContent = now.toLocaleString('en-US', options);
+                }
+                
+                // Update timestamp when page loads
+                updateTimestamp();
+                
+                // Update timestamp every minute
+                setInterval(updateTimestamp, 60000);
+            </script>
         </body>
         <script src="../src/s_lotto.js"></script>
-    </head>
 </html>
