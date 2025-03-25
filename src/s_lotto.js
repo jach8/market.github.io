@@ -51,6 +51,15 @@ const columnDefsLottos = [
       pinned: "left",
     },
     {
+        field:'stk_price',
+        headerName: 'Stock Price',
+        sortable: true,
+        valueFormatter: function(params) {
+          return "$" + params.value.toFixed(2);
+        },
+        maxWidth: 120,
+    },
+    {
       field: 'exp',
       sortable: true,
       headerName: 'Expiration',
@@ -96,6 +105,7 @@ const columnDefsLottos = [
         return params.value.toFixed(2);
       },
       maxWidth: 115,
+      hide: true, 
     },
     {
       field: 'percentchange',
@@ -139,7 +149,7 @@ const columnDefsLottos = [
       field: 'voi',
       headerName: 'VOI',
       // valueFormatter: x => x.toFixed(2), // Arrow function for concise formatting
-      hide: false,
+      hide: true,
       maxWidth: 120,
     },
     {
@@ -177,7 +187,8 @@ const columnDefsLottos = [
       headerName: 'IV',
       sortable: true,
       valueFormatter: function(params) {
-        return params.value.toFixed(2) + "%";
+        // return params.value.toFixed(2) * 100 + "%";
+        return round(params.value * 100) + "%";
       },
       hide: false,
       maxWidth: 100,
@@ -187,7 +198,8 @@ const columnDefsLottos = [
       headerName: 'AvgIV',
       sortable: true,
       valueFormatter: function(params) {
-        return params.value.toFixed(2) + "%";
+        // return params.value.toFixed(2) * 100 + "%";
+        return round(params.value * 100) + "%";
       },
       hide: false,
       maxWidth: 100,
