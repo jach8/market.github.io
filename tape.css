@@ -1,0 +1,77 @@
+.scroller__wrapper {
+  /* How Fast one slide is visible on screen (from entering screen to leaving it) */
+  --scrolling-gallery-item-duration: 10s;
+  /* How many items we want to see on screen at once */
+  --scrolling-gallery-items-visible: 7;
+  /* How many items are to scroll */
+  --scrolling-gallery-items-total: 7;
+  margin-top: .01em;
+  margin-bottom: .001;
+  overflow: hidden;
+  will-change: transform;
+  background-color: black; 
+  display: flex;
+  align-items: center;
+  z-index: 0;
+}
+
+.text-box {
+  /* Styles for the text box */
+  background-color: black;
+  color: black;
+  padding: .5em;
+  margin-right: 1%;
+  margin-top:0%;
+  flex-shrink: 0;
+  width: 15vmin; /* Fixed width for the text box */
+  height:auto;
+  z-index: 1; /* Ensure it stays above the scroller */
+  text-align: center;
+  font-size:2vmin;
+}
+
+.scroller__container {
+  /* Make the scroller container take the remaining space */
+  flex: 1;
+  overflow: hidden;
+}
+
+.scroller {
+  /* Controls the text going across the screen */
+  animation: scrolling-gallery calc(var(--scrolling-gallery-item-duration) * var(--scrolling-gallery-items-total) / var(--scrolling-gallery-items-visible)) linear infinite;
+  display: flex;
+  white-space: nowrap;
+}
+
+.scroller__item {
+  flex: 1 0 calc(100% / var(--scrolling-gallery-items-visible));
+  box-sizing: border-box;
+  padding: .001em;
+  font-size:2vmin;
+  margin-left:30px;
+}
+
+.scroller img {
+  display: flex;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  border-left: 0%;
+}
+
+@keyframes scrolling-gallery {
+  10% {
+    /* transform: translateX(100%); */
+    transform: translateX();
+  }
+  100% {
+    /* transform: translateX(-100%); */
+    transform: translateX(calc(var(--scrolling-gallery-items-total) * -100vw / var(--scrolling-gallery-items-visible)));
+  }
+}
+
+.scroller:hover,
+.scroller:focus {
+  animation-play-state: paused;
+}

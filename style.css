@@ -1,0 +1,110 @@
+body {
+    background: black !important;
+}
+
+/* On small screens, set height to 'auto' for the grid */
+@media screen and (max-width: 767px) {
+.row.content {
+  height: auto;
+  width: auto;
+  } 
+}
+
+* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.page-header {
+  padding: 20% 0;
+  height: 800px;
+}
+
+.bg-dark {
+  background-color: #343a40 !important;
+}
+.bg-primary {
+  background-color: #007bff !important;
+  /* on click change color */
+  
+}
+.text-white {
+  color: #fff !important;
+}
+.btn-primary {
+  margin: 0.0001rem;
+  border-color:white;
+  /* background-color: #0d60ba7a; */
+}
+
+
+.active-stocks-text {
+  background-color: #ccff00;
+  width: 100%;
+
+}
+
+.p7-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.bar-charts {
+  width: 100%;
+  height: 100%;
+}
+
+.candle-chart {
+  width: 100%;
+  height: 100%;
+}
+
+.ag-theme-quartz.compact, .ag-theme-quartz-dark.compact {
+  --ag-grid-size: 3px;
+  --ag-list-item-height: 20px;
+  --ag-font-size: 10px;
+}
